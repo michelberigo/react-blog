@@ -14,10 +14,14 @@ class Posts extends React.Component {
 
     renderPost(post) {
         return (
-            <div className="mb-5" key={ post.id }>
-                <h1>{ post.title }</h1>
-                <Link to={ post.url }>Link para abrir</Link>
-                <p>{ post.content }</p>
+            <div className="card mb-3" key={ post.id }>
+                <div className="card-body">
+                    <h5 className="card-title">{ post.title }</h5>
+
+                    <p className="card-text">{ post.content }</p>
+                    
+                    <Link to={ post.url }>Ver Post</Link>
+                </div>
             </div>
         )
     }
